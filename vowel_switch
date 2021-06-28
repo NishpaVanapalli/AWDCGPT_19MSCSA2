@@ -1,0 +1,49 @@
+import java.util.*;
+class vowel_switch
+{
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter an alphabet");
+String value=sc.next();
+switch(value)
+{
+case "a":System.out.println("vowel");
+	break;
+case "e":System.out.println("vowel");
+	break;
+case "i":System.out.println("vowel");
+	break;
+case "o":System.out.println("vowel");
+	break;
+case "u":System.out.println("vowel");
+	break;
+case "A":System.out.println("vowel");
+	break;
+case "E":System.out.println("vowel");
+	break;
+case "I":System.out.println("vowel");
+	break;
+case "O":System.out.println("vowel");
+	break;
+case "U":System.out.println("vowel");
+	break;
+default:System.out.println("consonant");
+}	
+}
+}
+
+o/p 1:
+Enter an alphabet
+o
+vowel
+
+o/p 2:
+Enter an alphabet
+r
+consonant
+
+o/p 3:
+Enter an alphabet
+A
+vowel
