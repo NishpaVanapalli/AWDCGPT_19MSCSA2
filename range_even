@@ -1,0 +1,44 @@
+import java.util.*;
+class range_even
+{
+	public static void main(String ar[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter m value");
+		int m=sc.nextInt();
+		System.out.println("Enter n value");
+		int n=sc.nextInt();
+		while(m>=n)
+		{
+			System.out.println(m);
+			m-=2;
+		}
+	}
+}
+
+o/p:
+Enter m value
+50
+Enter n value
+10
+50
+48
+46
+44
+42
+40
+38
+36
+34
+32
+30
+28
+26
+24
+22
+20
+18
+16
+14
+12
+10
