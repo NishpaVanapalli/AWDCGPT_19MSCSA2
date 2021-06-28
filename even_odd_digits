@@ -1,0 +1,28 @@
+import java.util.*;
+class even_odd_digits
+{
+	public static void main(String ar[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter n value");
+		int n=sc.nextInt();
+		int rem, count_even=0, count_odd=0;
+		while(n>0)
+		{
+			rem=n%10;
+			if(rem%2==0)
+			count_even+=1;
+			else
+			count_odd+=1;
+			n=n/10;
+		}
+		System.out.println("odd digits="+count_odd);
+		System.out.println("even digits="+count_even);
+	}
+}
+
+o/p:
+Enter n value
+12345
+odd digits=3
+even digits=2
