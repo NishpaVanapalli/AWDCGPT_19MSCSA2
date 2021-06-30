@@ -1,0 +1,26 @@
+import java.util.*;
+class pro_sum_digit
+{
+    public static void main(String ar[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int pro=1, sum=0, rem;
+        while(n>0)
+        {
+            rem=n%10;
+            pro=pro*rem;
+            sum=sum+rem;
+            n/=10;
+        }
+        System.out.println(pro-sum);
+    }
+}
+
+o/p 1:
+234
+15
+
+o/p 2:
+4421
+21
