@@ -1,0 +1,41 @@
+import java.util.*;
+class change_number
+{
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a number");
+int n=sc.nextInt();
+System.out.println("Enter x, y values");
+int x=sc.nextInt();
+int y=sc.nextInt();
+int rem, res=0, mul=1;
+while(n>0)
+{
+rem=n%10;
+if(rem==x)
+res=res+y*mul;
+else
+res=res+rem*mul;
+mul*=10;
+n/=10;
+}
+System.out.println(res);
+}
+}
+
+o/p 1:
+Enter a number
+16719
+Enter x, y values
+1
+8
+86789
+
+o/p 2:
+Enter a number
+234278
+Enter x, y values
+2
+5
+534578
