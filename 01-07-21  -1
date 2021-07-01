@@ -1,0 +1,27 @@
+import java.util.*;
+class star
+{
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter N value");
+int N=sc.nextInt();
+for(int i=N;i!=0;i--)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print("* ");
+}
+System.out.println();
+}
+}
+}
+
+o/p:
+Enter N value
+5
+* * * * *
+* * * *
+* * *
+* *
+*
