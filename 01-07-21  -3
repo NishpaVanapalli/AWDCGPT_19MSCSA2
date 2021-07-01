@@ -1,0 +1,29 @@
+import java.util.*;
+class char_pattern
+{
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter N value");
+int N=sc.nextInt();
+char ch='A';
+for(int i=1;i<=N;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print(ch+" ");
+ch++;
+}
+System.out.println();
+}
+}
+}
+
+o/p :
+Enter N value
+5
+A
+B C
+D E F
+G H I J
+K L M N O
