@@ -1,0 +1,31 @@
+import java.util.*;
+class dec_inc
+{
+public static void main(String a[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a number");
+int N=sc.nextInt();
+if(N%4==0)
+{
+++N;
+System.out.println(N);
+}
+else
+{
+--N;
+System.out.println(N);
+}
+}
+}
+
+
+o/p 1:
+Enter a number
+5
+4
+
+o/p 2:
+Enter a number
+8
+9
