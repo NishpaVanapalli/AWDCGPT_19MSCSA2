@@ -1,0 +1,60 @@
+import java.util.*;
+public class alpha_patt
+{
+	public static void main(String ar[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter n value");
+		int n=sc.nextInt();
+		char ch='A';
+		int size=n*2-1;
+		int end=size-1;
+		int start=0;
+		char a[][]=new char[size][size];
+		
+		while(n!=0)
+    		{
+        		for(int i=start;i<=end;i++)
+         		{
+             			for(int j=start;j<=end;j++)
+             			{
+                			if((i==start || i==end )||( j==start || j==end))
+                			{
+                			        a[i][j]='A';
+                			    
+                			}
+                   			else
+                   			{
+                   			    ch++;
+                   			    a[i][j]=ch;
+                   			}
+             			}
+         		}
+         	start++;
+        	end--;
+         	n--;
+    		}
+		
+		
+		for(int i=0;i<size;i++)
+		{
+			for(int j=0;j<size;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+o/p:
+Enter n value
+4
+A A A A A A A
+A A A A A A A
+A A A A A A A
+A A A A A A A
+A A A A A A A
+A A A A A A A
+A A A A A A A
