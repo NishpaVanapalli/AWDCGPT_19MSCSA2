@@ -1,0 +1,70 @@
+import java.util.*;
+class zero_arr
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number of elements");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		int i, j, temp;
+		System.out.println("Enter array elements");
+		for(i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(i=0;i<n;i++)
+		{
+			System.out.println("The elements before sorting are: "+a[i]);
+		}
+		System.out.println("-----------------------------");
+		for(i=1;i<=n;i++)
+		{
+			for(j=0;j<n-1;j++)
+			{
+				if(a[j]==0)
+				{
+				temp=a[j];
+				a[j]=a[j+1];
+				a[j+1]=temp;				
+				}
+			}
+		}
+		
+		for(i=0;i<n;i++)
+		{
+			System.out.println("The elements after sorting are: "+a[i]);
+		}
+	}
+}
+
+
+o/p: 
+Enter number of elements
+8
+Enter array elements
+12
+0
+8
+0
+9
+12
+15
+16
+The elements before sorting are: 12
+The elements before sorting are: 0
+The elements before sorting are: 8
+The elements before sorting are: 0
+The elements before sorting are: 9
+The elements before sorting are: 12
+The elements before sorting are: 15
+The elements before sorting are: 16
+-----------------------------
+The elements after sorting are: 12
+The elements after sorting are: 8
+The elements after sorting are: 9
+The elements after sorting are: 12
+The elements after sorting are: 15
+The elements after sorting are: 16
+The elements after sorting are: 0
+The elements after sorting are: 0
