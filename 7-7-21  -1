@@ -1,0 +1,41 @@
+import java.util.*;
+class evenodd_count
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the number of elements");
+int n=sc.nextInt();
+int a[]=new int[n];
+int i, even=0, odd=0, pro; 
+System.out.println("Enter the elements into the array");
+for(i=0;i<n;i++)
+a[i]=sc.nextInt();
+for(i=0;i<n;i++)
+{
+if(a[i]%2==0)
+even++;
+else
+odd++;
+}
+pro=even*odd;
+System.out.println("Even count: "+even+"  Odd count: "+odd+"  Product: "+pro);
+}
+}
+
+
+o/p:
+Enter the number of elements
+10
+Enter the elements into the array
+56
+32
+41
+98
+75
+100
+61
+94
+65
+82
+Even count: 6  Odd count: 4  Product: 24
