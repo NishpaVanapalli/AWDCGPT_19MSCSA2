@@ -1,0 +1,59 @@
+import java.util.*;
+class rightleft_rotate
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter no of elements");
+int n=sc.nextInt();
+int i,j;
+int a[]=new int[n];
+System.out.println("enter the elements into array");
+for(i=0;i<n;i++)
+{
+a[i]=sc.nextInt();
+}
+int b[]=new int[n];
+int c[]=new int[n];
+System.out.println("enter x and y values");
+int x=sc.nextInt();
+int y=sc.nextInt();
+for(i=0;i<n;i++)
+{
+if((i-x)<0)
+b[n+i-x]=a[i];
+else
+b[i-x]=a[i];
+}
+for(i=0;i<n;i++)
+{
+if((i-y)<0)
+c[i]=a[n+i-y];
+else
+c[i]=a[i-y];
+}
+for(i=0;i<n;i++)
+System.out.print(b[i]+" "+"\n"+c[i]+" ");
+}
+} 
+
+
+
+out put:
+enter no of elements
+5
+enter the elements into array
+1
+2
+3
+4
+5
+enter x and y values
+2
+3
+3
+3 4
+4 5
+5 1
+1 2
+2
