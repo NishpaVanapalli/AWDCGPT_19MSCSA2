@@ -1,0 +1,33 @@
+import java.util.*;
+class str_length
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the input");
+String str=sc.nextLine();
+String ch[]=str.split(" ");
+int n=ch.length;
+int sum=0,i;
+for(i=0;i<n;i++)
+{
+if(n==0)
+{
+System.out.print(n);
+}
+else
+{
+String st=ch[i];
+sum+=st.length();
+}
+}
+System.out.print("the lengthof the string is: "+sum);
+}
+}
+
+
+
+out put:
+enter the input
+aditya degree college
+the lengthof the string is: 19
