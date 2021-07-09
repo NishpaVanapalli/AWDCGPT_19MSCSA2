@@ -1,0 +1,32 @@
+import java.util.*;
+class palindrome_string
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a string");
+String str=sc.nextLine();
+String str2=" ";
+int i,j=str.length();
+for(i=j-1;i>=0;i--)
+{
+str2=str2+str.charAt(i);
+}
+if(str==str2)
+{
+System.out.println("palindrome");
+}
+else
+{
+System.out.println("not palindrome");
+}
+}
+}
+
+
+
+
+out put:
+enter a string
+Aditya
+not palindrome
