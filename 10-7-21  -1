@@ -1,0 +1,24 @@
+import java.util.*;
+class reverse_string
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a string");
+		String str=sc.nextLine();
+		for(int i=str.length()-1;i>=0;i--)
+		{
+			System.out.print(str.charAt(i));
+		}	
+	}
+}
+
+o/p 1:
+Enter a string
+hello world
+dlrow olleh
+
+o/p 2:
+Enter a string
+sun rises in the east
+tsae eht ni sesir nus
