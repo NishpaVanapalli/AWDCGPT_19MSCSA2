@@ -1,0 +1,44 @@
+import java.util.*;
+class deciconversion
+{
+	public static void main(String ar[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("1. Decimal to Binary\n2. Decimal to Octal\n3. Decimal to Hexal");
+		System.out.print("Enter your choice: ");
+		int value=sc.nextInt();
+		System.out.print("Enter a decimal value: ");
+		int n=sc.nextInt();
+		switch(value)
+		{
+			case 1: String bin=Integer.toBinaryString(n);
+				System.out.println("Binary: "+bin);
+				break;
+			case 2: String oct=Integer.toOctalString(n);
+				System.out.println("Octal: "+oct);
+				break;
+			case 3: String hex=Integer.toHexString(n);
+				System.out.println("Hexal: "+hex);
+				break;
+			default: System.out.println("Invalid choice");
+		}
+	}
+}
+
+
+o/p 1:
+1. Decimal to Binary
+2. Decimal to Octal
+3. Decimal to Hexal
+Enter your choice: 2
+Enter a decimal value: 12
+Octal: 14
+
+
+o/p 2:
+1. Decimal to Binary
+2. Decimal to Octal
+3. Decimal to Hexal
+Enter your choice: 1
+Enter a decimal value: 25
+Binary: 11001
