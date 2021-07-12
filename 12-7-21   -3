@@ -1,0 +1,38 @@
+import java.util.*;
+class str_pos
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a string : ");
+		String str=sc.nextLine();
+		String str1[]=str.split(" ");
+		int n=str1.length;
+		System.out.print("Enter position to insert : ");
+		int p=sc.nextInt();
+		String nstr;
+		System.out.print("Enter inserting string : ");
+		String ins=sc.next();
+		for(int i=0;i<n;i++)
+		{
+			nstr=str1[i]+" ";
+			StringBuilder sb=new StringBuilder(nstr);
+			sb.insert(p, ins);
+			System.out.print(sb.toString());
+		}
+	}
+}
+
+
+o/p 1:
+Enter a string : Very Good
+Enter position to insert : 2
+Enter inserting string : hi
+Vehiry Gohiod
+
+
+o/p 2:
+Enter a string : hello world
+Enter position to insert : 3
+Enter inserting string : hai
+helhailo worhaild
