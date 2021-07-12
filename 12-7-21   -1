@@ -1,0 +1,32 @@
+import java.util.*;
+class string_up
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a string");
+		String str=sc.nextLine();
+		String str1="";
+		String a, b;
+		String st[]=str.split(" ");
+		for(String i:st)
+		{
+			a=i.substring(0,1);
+			b=i.substring(1);
+			str1+=a.toUpperCase()+b+" ";
+		}
+	System.out.println(str1);
+	}
+}
+
+
+o/p 1:
+Enter a string
+this is coding class
+This Is Coding Class
+
+
+o/p 2:
+Enter a string
+sun rises in the east
+Sun Rises In The East
