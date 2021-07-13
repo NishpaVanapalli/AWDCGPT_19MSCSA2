@@ -1,0 +1,28 @@
+import java.util.*;
+class fact_rec
+{
+	static int fact(int n)
+	{
+		if(n==1)
+		return 1;
+		else
+		return(n*fact(n-1));	
+	}
+	
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number : ");
+		int n=sc.nextInt();
+		System.out.print("The factorial of " + n + " is " + fact(n));
+	}
+}
+
+
+o/p 1:
+Enter a number : 6
+The factorial of 6 is 720
+
+o/p 2:
+Enter a number : 12
+The factorial of 12 is 479001600
