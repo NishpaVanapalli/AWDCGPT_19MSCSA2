@@ -1,0 +1,44 @@
+import java.util.*;
+class twin_hack
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter n value : ");
+		int n=sc.nextInt();
+		System.out.print("Enter m value : ");
+		int m=sc.nextInt();
+		twin(n);
+		int num=0;
+		for(int i=n;i<m;i++)
+		{
+			if(twin(i+2) && twin(i))
+			{ 
+				num++;
+			}
+			else
+				i+=2;
+		}
+	System.out.print(num);
+	}
+	static boolean twin(int a)
+	{
+		int count=0;
+		for(int i=2;i<a;i++)
+		{
+			if(a%i==0)
+			count++;
+			if(count==0)
+			return true;
+			else
+			return false;
+		}
+	return twin(a);
+	}
+}
+
+
+o/p:
+Enter n value : 3
+Enter m value : 13
+3
