@@ -1,0 +1,32 @@
+import java.util.*;
+class arr_join
+{
+public static void main(String args[])
+{
+ArrayList<Integer> a1=new ArrayList<Integer>();
+ArrayList<Integer> a2=new ArrayList<Integer>();
+ArrayList<Integer> a3=new ArrayList<Integer>();
+a1.add(10);
+a1.add(20);
+a1.add(30);
+a1.add(40);
+Collections.sort(a1);
+System.out.println("First array is : "+a1);
+a2.add(100);
+a2.add(200);
+a2.add(300);
+a2.add(400);
+Collections.sort(a2);
+System.out.println("Second array is : "+a2);
+a3.addAll(a1);
+a3.addAll(a2);
+Collections.sort(a3);
+System.out.println("Final list is : "+a3);
+}
+}
+
+
+o/p 1:
+First array is : [10, 20, 30, 40]
+Second array is : [100, 200, 300, 400]
+Final list is : [10, 20, 30, 40, 100, 200, 300, 400]
