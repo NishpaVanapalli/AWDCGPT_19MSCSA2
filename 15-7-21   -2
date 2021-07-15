@@ -1,0 +1,39 @@
+class GfG
+{
+    void add_to_ArrayList(ArrayList<Integer> A, int x)
+    {
+	A.add(x);
+    }	
+    void sort_ArrayList_Asc(ArrayList<Integer> A)
+    {
+	Collections.sort(A);
+    }
+    void reverse_ArrayList(ArrayList<Integer> A)
+    {
+		Collections.reverse(A);
+    }
+	
+    int size_Of_ArrayList(ArrayList<Integer> A)
+    {
+	  int a;
+	  a=A.size();
+	  return a;
+    }
+    void sort_ArrayList_Desc(ArrayList<Integer> A)
+    {
+	Collections.sort(A, Collections.reverseOrder());
+    }
+    void print_ArrayList(ArrayList<Integer> A)
+    {
+        for(Integer i:A)
+        {
+            System.out.print(i+" ");
+        }
+    }
+}
+
+
+mam/sir, 
+  I have executed this program in greeks for greeks but when i am checking to open it in new tab, the program is not visible.
+  So, I have posted this program in github and i have given the o/p screenshot of greeks for greeks.
+  https://practice.geeksforgeeks.org/problems/java-collection-set-1-arraylist/1
