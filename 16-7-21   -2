@@ -1,0 +1,53 @@
+import java.util.*;
+class link_list
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter n value : ");
+		int n=sc.nextInt();
+		LinkedList<Integer> ll=new LinkedList<Integer>();
+		System.out.print("Enter "+n+" values : ");
+		for(int i=0;i<n;i++)
+		{
+			ll.add(sc.nextInt());
+		}
+		System.out.print("Enter value to search :");
+		int key=sc.nextInt();		
+		if(ll.contains(key))
+		{
+			int ind=ll.indexOf(key);
+			ll.remove(ind);
+			System.out.print("List after deletion : ");
+			for(Integer i:ll)
+			System.out.print(i+" ");
+		}
+		else
+		{
+			System.out.print("Element not found");
+		}
+		
+	}
+}
+
+
+o/p 1:
+Enter n value : 5
+Enter 5 values : 10
+20
+30
+40
+50
+Enter value to search :30
+List after deletion : 10 20 40 50
+
+
+o/p 2:
+Enter n value : 5
+Enter 5 values : 10
+20
+30
+40
+50
+Enter value to search :3
+Element not found
