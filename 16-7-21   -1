@@ -1,0 +1,55 @@
+import java.util.*;
+class frarr_list
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter n value : ");
+		int n=sc.nextInt();
+		ArrayList<Integer> x=new ArrayList<Integer>();
+		System.out.print("Enter "+n+" values : ");
+		for(int i=0;i<n;i++)
+		{
+			x.add(sc.nextInt());
+		}
+		System.out.print("Enter value in array , update value :");
+		int key=sc.nextInt();
+		int val=sc.nextInt();
+		
+		if(x.contains(key))
+		{
+			int ind=x.indexOf(key);
+			x.set(ind, val);
+			for(Integer a:x)
+			System.out.print(a+" ");
+		}
+		else
+		{
+			System.out.print("false");
+		}
+		
+	}
+}
+
+o/p 1:
+Enter n value : 5
+Enter 5 values : 10
+20
+30
+40
+50
+Enter value in array , update value :20
+99
+10 99 30 40 50
+
+
+o/p 2:
+Enter n value : 5
+Enter 5 values : 10
+20
+30
+40
+50
+Enter value in array , update value :5
+99
+false
