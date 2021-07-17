@@ -1,0 +1,80 @@
+import java.util.*;
+class lmenu
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		LinkedList<Integer> x=new LinkedList<Integer>();
+		int n,ch, ind;
+		do
+		{
+			System.out.println("1.BeginInsert\n2.EndInsert\n3. Position Insert\n4. Begin Delete");
+			System.out.println("5. End Delete\n6. Position Delete\n7. Display\n8. Exit");
+			System.out.print("Enter your choice : ");
+			ch=sc.nextInt();
+			switch(ch)
+			{
+				case 1: System.out.print("Enter n value : ");
+					n=sc.nextInt();
+					x.addFirst(n);
+					break;
+				case 2: System.out.print("Enter n value : ");
+					n=sc.nextInt();
+					x.addLast(n);
+					break;
+				case 3: System.out.print("Enter index value : ");
+					ind=sc.nextInt();
+					System.out.print("Enter n value : ");
+					n=sc.nextInt();
+					x.add(ind, n);
+					break;
+				case 4: x.removeFirst();
+					break;
+				case 5:	x.removeLast();
+					break;
+				case 6: System.out.print("Enter index value : ");
+					ind=sc.nextInt();
+					x.remove(ind);
+					break;
+				case 7: for(Integer a:x)
+					System.out.print(a+ "--> ");
+					break;
+				case 8: break;
+				default: System.out.print("Invalid Choice");
+			}
+		}while(ch<4);
+	}
+}
+
+
+o/p :
+1.BeginInsert
+2.EndInsert
+3. Position Insert
+4. Begin Delete
+5. End Delete
+6. Position Delete
+7. Display
+8. Exit
+Enter your choice : 1
+Enter n value : 10
+1.BeginInsert
+2.EndInsert
+3. Position Insert
+4. Begin Delete
+5. End Delete
+6. Position Delete
+7. Display
+8. Exit
+Enter your choice : 2
+Enter n value : 20
+1.BeginInsert
+2.EndInsert
+3. Position Insert
+4. Begin Delete
+5. End Delete
+6. Position Delete
+7. Display
+8. Exit
+Enter your choice : 7
+10--> 20-->
