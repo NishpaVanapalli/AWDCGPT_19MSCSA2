@@ -1,0 +1,78 @@
+import java.util.*;
+class vlist
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		Vector v1=new Vector();
+		Vector v2=new Vector();
+		Vector v3=new Vector();
+		System.out.print("Enter n value : ");
+		int n=sc.nextInt();
+		int ind, ch;
+		for(int i=0;i<n;i++)
+		v1.add(sc.next());
+		System.out.print("1. Print list\n2. Remove element from vector and print list\n");
+		System.out.print("3. find value and update it, print list \n");
+		System.out.print("4. Find name in list and if not found , print false\n");
+		System.out.print("Enter your choice : ");
+		ch=sc.nextInt();
+		switch(ch)
+		{
+		case 1: System.out.print(v1);
+			break;
+		case 2: System.out.print("Enter element to remove : ");
+			v1.remove(sc.next());
+			System.out.print(v1+" ");
+			break;
+		case 3: System.out.print("Enter element to find : ");
+			v2.add(sc.next());
+			ind=v1.indexOf(v2);
+			System.out.print("Enter element to update : ");
+			v3.add(sc.next());
+			v1.set(ind-1, v3);
+			System.out.print(v1+ " ");
+			break;
+		case 4: System.out.print("Enter element to search : ");
+			v2.add(sc.next());
+			System.out.print(v1.contains(v2));
+			break;
+		default: System.out.println("Invalid Choice");
+		}
+	}
+}
+
+
+
+o/p 1:
+Enter n value : 6
+101
+rama
+6.58
+102
+gita
+8.98
+1. Print list
+2. Remove element from vector and print list
+3. find value and update it, print list
+4. Find name in list and if not found , print false
+Enter your choice : 2
+Enter element to remove : gita
+[101, rama, 6.58, 102, 8.98]
+
+
+o/p 2:
+Enter n value : 6
+101
+rama
+6.58
+102
+gita
+8.98
+1. Print list
+2. Remove element from vector and print list
+3. find value and update it, print list
+4. Find name in list and if not found , print false
+Enter your choice : 4
+Enter element to search : sita
+false
