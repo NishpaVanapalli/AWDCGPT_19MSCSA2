@@ -1,0 +1,25 @@
+import java.util.*;
+class MyHashSet {
+
+    /** Initialize your data structure here. */
+    HashSet<Integer> hs;
+    public MyHashSet() {
+        hs=new HashSet<Integer>();
+    }
+    
+    public void add(int key) {
+        hs.add(key);
+    }
+    
+    public void remove(int key) {
+        hs.remove(key);
+    }
+    
+    /** Returns true if this set contains the specified element */
+    public boolean contains(int key) {
+        return hs.contains(key);
+    }
+}
+
+
+/*****************************  leetcode assignment program   *********************************/
