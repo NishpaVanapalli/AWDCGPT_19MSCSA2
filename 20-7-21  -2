@@ -1,0 +1,32 @@
+import java.util.*;
+class arrlist
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter n value : ");
+		int n=sc.nextInt();
+		ArrayList<Integer> a1=new ArrayList<Integer>();
+		System.out.print("Enter values into arraylist : ");
+		for(int i=0;i<n;i++)
+		{
+			a1.add(sc.nextInt());
+		}
+		System.out.print("Enter k value : ");
+		int k=sc.nextInt();
+		Iterator<Integer> it=a1.iterator();
+		while(it.hasNext())
+		{
+		if(it.next()<=k)
+		it.remove();
+		}
+	System.out.print(a1);
+	}
+}
+
+
+o/p : 
+Enter n value : 7
+Enter values into arraylist : 30 40 15 20 25 7 99
+Enter k value : 20
+[30, 40, 25, 99]
