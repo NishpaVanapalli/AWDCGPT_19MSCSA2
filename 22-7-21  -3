@@ -1,0 +1,62 @@
+import java.util.*;
+class ht_oper
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int y=0;
+		Hashtable<Integer,Integer> x=new Hashtable<Integer,Integer>();
+		x.put(101,50000);
+		x.put(102,45000);
+		x.put(103,35000);
+		x.put(104,40000);
+		x.put(105,45000);
+		System.out.println(x.values());
+		System.out.println(x);
+		for (Map.Entry<Integer, Integer> i : x.entrySet())
+		{
+			System.out.println(i.getKey() + "---> " + i.getValue());
+		}
+		System.out.print("Enter a key to search : ");
+		int key=sc.nextInt();
+		if(x.containsKey(key))
+		{
+		y=x.get(key);
+ 		x.put(key,y+5000);
+		for (Map.Entry<Integer, Integer> i : x.entrySet())
+		{
+			System.out.println(i.getKey() + "---> " + i.getValue());
+		}
+		}
+		else
+		System.out.print("Value Not Found");
+	}
+}
+
+
+o/p 1:
+[45000, 40000, 35000, 45000, 50000]
+{105=45000, 104=40000, 103=35000, 102=45000, 101=50000}
+105---> 45000
+104---> 40000
+103---> 35000
+102---> 45000
+101---> 50000
+Enter a key to search : 103
+105---> 45000
+104---> 40000
+103---> 40000
+102---> 45000
+101---> 50000
+
+
+o/p 2:
+[45000, 40000, 35000, 45000, 50000]
+{105=45000, 104=40000, 103=35000, 102=45000, 101=50000}
+105---> 45000
+104---> 40000
+103---> 35000
+102---> 45000
+101---> 50000
+Enter a key to search : 107
+Value Not Found
