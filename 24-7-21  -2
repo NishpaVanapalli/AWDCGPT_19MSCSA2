@@ -1,0 +1,21 @@
+import java.util.*;
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2)
+    {
+        HashSet<Integer> h1 = new HashSet<Integer>();
+        for(int i:nums1)
+            h1.add(i);
+        HashSet<Integer> h2 = new HashSet<Integer>();
+        for(int j:nums2)
+            if(h1.contains(j))
+                h2.add(j);
+        int[] res = new int[h2.size()];
+        int i=0;
+        for(int n:h2)
+            res[i++] = n;
+        return res;
+    }
+}
+
+
+******************  leetcode program  *****************
