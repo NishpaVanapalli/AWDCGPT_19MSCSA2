@@ -1,0 +1,21 @@
+class Solution {
+    public int countPrimes(int n) {
+        int count=0,flag;
+        for(int i=1;i<n;i++)
+        {
+            flag=0;
+            for(int j=1;j<=i;j++)
+            {
+               if(i%j==0)
+                   flag+=1;  
+            }
+            if(flag==2)
+                count+=1;
+        }
+        return count;
+    }
+}
+
+
+
+****************  leetcode program  ***************
