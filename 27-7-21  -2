@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int q=sc.nextInt();
+        int x, y;
+        for(int k=1;k<=q;k++)
+        {
+            x=sc.nextInt();
+            y=sc.nextInt();  
+            int count=0,flag;
+            for(int i=x+1;i<y;i++)
+            {
+                flag=0;
+                for(int j=1;j<=i;j++)
+                {
+                    if(i%j==0)
+                        flag+=1;  
+                }
+                if(flag==2)
+                    count+=1;
+            }
+            System.out.println(count);
+        }
+    }
+}
+
+*******************  hacker rank program  *******************
