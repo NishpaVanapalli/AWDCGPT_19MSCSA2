@@ -1,0 +1,47 @@
+import java.util.*;
+public class megaprime {
+
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        int i;
+        int f = sc.nextInt();
+        int l = sc.nextInt(); 
+        int count=0;
+        for (i = f; i <= l; i++) {
+            if (prime(i)) {
+                count+=1;
+            }
+        }
+        System.out.println(count);
+    }
+    public static boolean prime(int n)
+    {
+        int rem;
+        for (int i = 2; i <= n / 2; i++) {
+            rem = n % i;
+            if (rem == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean megaprime(int n)
+    {
+        int r1;
+        if(prime(n))
+        {
+            r1=n%10;
+            if(prime(r1))
+            n/=10;
+            else
+            return false;
+        }
+        return true;
+    }
+}
+
+
+o/p :
+1 100
+26
