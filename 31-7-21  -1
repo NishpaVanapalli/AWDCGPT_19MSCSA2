@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int q=sc.nextInt();
+        Stack<Integer> s1=new Stack<Integer>();
+        Stack<Integer> s2=new Stack<Integer>();
+        while(q!=0)
+        {
+            int n=sc.nextInt();
+            switch(n)
+            {
+                case 1: int x=sc.nextInt();
+                        s1.push(x);
+                        break;
+                case 2: copystack();
+                        s2.pop();
+                        break;
+                case 3: copystack();
+                        s2.peek();
+                        break;
+            }
+            q--;
+        }
+    }
+}
+
+
+*******************  hacker rank program  ********************
