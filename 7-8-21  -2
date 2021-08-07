@@ -1,0 +1,19 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        int a=0, b=0;
+        int n=nums.length;
+        int res1=0, res2=0;
+        for(int i=0;i<n;i++)
+        {
+            
+            res1=(a^nums[i])&~b;
+            res2=nums[i]&a | ~nums[i]&b;
+            a=res1;
+            b=res2;
+        }
+        return a;
+    }
+}
+
+
+************  leetcode program  *************
