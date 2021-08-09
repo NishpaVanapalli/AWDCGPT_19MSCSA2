@@ -1,0 +1,64 @@
+import java.util.*;
+class linearsearch
+{
+	public static void main(String ar[])
+	{
+		int t=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter size of array");
+		int l=sc.nextInt();
+		int a[]=new int[l];
+		System.out.println("Enter elements into array");
+		for(int i=0;i<l;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		System.out.println("Enter search element");
+		int s=sc.nextInt();
+		for(int i=0;i<l;i++)
+		{
+			if(a[i]==s)
+			{
+				t++;
+			}
+		}
+		if(t==0)
+		{
+			System.out.println("Search unsuccessful");
+		}
+		else
+		{
+			System.out.println("Search successful");
+		}
+	}
+}
+
+
+
+
+o/p 1:
+Enter size of array
+5
+Enter elements into array
+65
+23
+14
+9
+87
+Enter search element
+6
+Search unsuccessful
+
+
+o/p 2:
+Enter size of array
+5
+Enter elements into array
+65
+23
+14
+9
+87
+Enter search element
+87
+Search successful
