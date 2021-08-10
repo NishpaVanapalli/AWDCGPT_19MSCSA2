@@ -1,0 +1,40 @@
+import java.util.*;
+class sel_sort
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		int i, j, min, temp;
+		System.out.print("Enter number of elements : ");
+		int n=sc.nextInt();
+		int ar[]=new int[n];
+		System.out.print("Enter "+n+" elements : ");
+		for(i=0;i<n;i++)
+		ar[i]=sc.nextInt();
+
+		for(i=0;i<n;i++)
+		{
+			min=i;
+			for(j=i+1;j<n;j++)
+			{
+				if(ar[min]>ar[j])
+				min=j;
+			}
+			temp=ar[i];
+			ar[i]=ar[min];
+			ar[min]=temp;
+		}
+
+		System.out.println("After sorting : ");
+		for(i=0;i<n;i++)
+		System.out.print(ar[i]+" ");
+	}
+}
+
+
+
+o/p:
+Enter number of elements : 5
+Enter 5 elements : 15 4 3 2 8
+After sorting :
+2 3 4 8 15
