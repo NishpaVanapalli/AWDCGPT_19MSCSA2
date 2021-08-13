@@ -1,0 +1,44 @@
+import java.util.*;
+class pal_rec
+{
+	static boolean palindrome(String s)
+	{
+		if(s.length()==0||s.length()==1)
+			return true;
+		if(s.charAt(0)==s.charAt(s.length()-1))
+			return palindrome(s.substring(1, s.length()-1));
+		return false;
+	}
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a value : ");
+		String s=sc.nextLine();
+		if(palindrome(s))
+			System.out.println(s+" is a palindrome");
+		else
+			System.out.println(s+" is not a palindrome");
+	}
+}
+
+
+
+
+o/p 1:
+Enter a value : malayalam
+malayalam is a palindrome
+
+
+o/p 2:
+Enter a value : 121
+121 is a palindrome
+
+
+o/p 3:
+Enter a value : aditya
+aditya is not a palindrome
+
+
+o/p 4:
+Enter a value : 123456
+123456 is not a palindrome
