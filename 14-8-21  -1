@@ -1,0 +1,46 @@
+import java.util.*;
+public class per_str
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter input : ");
+		String s= sc.next();
+		System.out.println("Possible Substrings are: ");
+		permutation(s,"");
+	}
+
+	public static void permutation(String input,String output) 
+	{
+		if(input.length()==0)
+		{
+			System.out.println(output);
+			return;
+		}
+		else
+		{ 
+			for(int i=0;i<input.length();i++)
+			{ 
+				char ch = input.charAt(i); 
+				String left = input.substring(0,i); 
+				String right = input.substring(i+1);
+				String input1=left+right; 
+				String output1 = output+ ch;
+				permutation(input1,output1); 
+			}
+		}
+	}
+}
+
+
+
+
+o/p:
+Enter input : abc
+Possible Substrings are:
+abc
+acb
+bac
+bca
+cab
+cba
