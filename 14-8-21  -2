@@ -1,0 +1,32 @@
+class ind_rec
+{
+	static final int N=50;
+	static int n=0;
+	public static void mul1()
+	{
+		if(n<N)
+		{
+			n=n+5;
+			System.out.print(n+" ");
+			mul2();
+		}
+	}
+	public static void mul2()
+	{
+		if(n<N)
+		{
+			n+=5;
+			System.out.print(n+" ");
+			mul1();
+		}
+	}
+	public static void main(String args[])
+	{
+		mul1();
+	}
+}
+
+
+
+o/p:
+5 10 15 20 25 30 35 40 45 50
