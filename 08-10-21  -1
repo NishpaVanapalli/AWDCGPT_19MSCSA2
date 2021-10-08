@@ -1,0 +1,49 @@
+import java.util.*;
+import java.io.*;
+public class Prime_fact_sum
+{
+    public static void main(String agrs[])
+    {
+        int n=10000000;
+        int prime[]=new int[n+1];
+        int prefix[]=new int[n+1];
+        int i, j, x, y, p;
+        for(i=0;i<=n;i++)
+        prime[i]=1;
+        prime[0]=prime[1]=0;
+        for(p=2;p<=Math.sqrt(n);p++)
+        {
+            if(prime[p]==1)
+            {
+                for(i=p*p;i<=n;i=i+p)
+                prime[i]=0;
+            }
+        }
+        prefix[0]=0;
+        for(j=1;j<=n;j++)
+        {
+            if(prime[j]==1)
+            prefix[j]=prefix[j-1]+j;
+            else
+            prefix[j]=prefix[j-1];
+        }
+        int q;
+        Scanner sc=new Scanner(System.in);
+        q=sc.nextInt();
+        while(q>0)
+        {
+            int l=sc.nextInt();
+            int r=sc.nextInt();
+            System.out.println(prefix[r]-prefix[l-1]);
+            q--;
+        }
+    }
+}
+
+
+
+
+o/p:
+1
+1 10
+17
